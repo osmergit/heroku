@@ -42,10 +42,10 @@ export const shuserone = (req, res) => {
   //Actualizar un usuario
   export const upuser =  (req, res) => {
     const { id } = req.params;
-    const { nomuser , password, correo } = req.body;
-const user = this
-const salt = bcrypt.genSaltSync(12);
-const hash = bcrypt.hashSync(password, salt);
+    var { nomuser , password, correo } = req.body;
+var user = this
+var salt = bcrypt.genSaltSync(12);
+var hash = bcrypt.hashSync(password, salt);
 password = hash;
     usuario
       .updateOne({ _id: id }, { $set: { nomuser, password, correo } })
