@@ -1,5 +1,5 @@
 import { usuario } from '../models/usuario.js';
-
+import bcrypt from 'bcrypt';
 // Registrar un usuario en la abse de datos
 export const regusuario = (req, res) => {
     const user = usuario(req.body);
